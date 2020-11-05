@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.posts {
+  text-align: center;
+}
+
+.post {
+  border: 1px solid black;
+  margin: 30px;
+}
