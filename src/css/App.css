@@ -45,3 +45,10 @@
   border: 1px solid black;
   margin: 30px;
 }
+
+.post-list {
+  text-align: left;
+  border: 1px solid black;
+  margin: 30px;
+  padding-left: 10px ;
+}
