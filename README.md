@@ -1,3 +1,20 @@
+# Individual Project -Web Development
+
+This simple web app project is an individual project conducted within the scope of training conducted by Software Development Academy (SDA), KTU and Novare Potential.
+
+# Project Title: 
+Package Tracking Viewer
+
+# Problem Statement: 
+The problem statement of this project is "Create a simple web app for our customers that displays a list of orders (or parcels) with some details."
+
+# Project Objectives: 
+In the project, the information in the JSON file is accessed, it is possible to search according to id and status from this information and detailed information of this list can be accessed.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
