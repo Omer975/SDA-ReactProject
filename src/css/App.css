@@ -39,16 +39,69 @@
 
 .posts {
   text-align: center;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding:0;
+  margin:0;
+  
 }
 
 .post {
   border: 1px solid black;
   margin: 30px;
+  width:250px;
+  height:150px;  
 }
 
 .post-list {
   text-align: left;
   border: 1px solid black;
   margin: 30px;
-  padding-left: 10px ;
+  padding-left: 10px;
+  width:400px;
+  height:550px;
+
+}
+
+.button {
+  padding: 8px 8px;
+  font-weight: bold;
+  background-color: rgb(22, 24, 189);
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* text-align: center; */
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.button:hover {
+  background-color: rgb(46, 102, 60);
+}
+
+img {
+  padding-bottom:20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar input {
+  width:50%;
+  height: 30px;
+}
+
+.button-2 {
+  margin:20px;
 }

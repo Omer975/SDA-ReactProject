@@ -1,43 +1,41 @@
-import React, {Component} from "react";
-import logo from './assets/images/logo.svg';
+//React core
+import React from "react";
+import image from './assets/images/package2.jpg';
 import './css/App.css';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //Components
-import Card from "./components/Card";
-import SearchBox from "./components/SearchBox";
+// import Card from "./components/Card";
+// import SearchBox from "./components/SearchBox";
+// import CardInfo from "./components/CardInfo";
+import HomePage from "./components/HomePage";
 import CardInfo from "./components/CardInfo";
 
 //import others
-import information from "./information.json";
+// import information from "./information.json";
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      information: information,
-      searchTerm: ''
-    }  
-  }
+export default function App() {
+  return(
+    <div>
+      <img src={image} alt="post-img" />
+     
+   
+      <Router>
+        <div class="App">
+          <h1>Package Tracking Viewer</h1>
+          <Link className="button" to="/home">
+            Search Package
+          </Link>
 
-  handleInput = (e) => {
-    // console.log(e.target.value);
-    this.setState({searchTerm: e.target.value})
-  }
-  render() {
-    let filteredInfo = this.state.information.filter( (info) => {
-      return info.id.includes(this.state.searchTerm) | info.status.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+          <Switch>
+            {/*  <Route path="/" component={App} /> */}
+            <Route path="/home" component={HomePage} />
+            <Route path="/cardinfo" component={CardInfo} />
+          </Switch>
 
-    })
-  return (
-      <div className="App">
-        <h1>Package Tracking Viewer</h1>
-        <SearchBox handleInput={this.handleInput}/>
-        <Card filteredInfo={filteredInfo}  />
-        {/* <CardInfo /> */}
-        
-      </div>
-    );
-  }
+        </div>
+      </Router>
+    </div>
+  );
 }
-
-export default App;
