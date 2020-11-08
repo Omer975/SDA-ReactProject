@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 //import others
 import information from "../information.json";
+import "../css/App.css";
 
 export default function CardInfo() {
     return (

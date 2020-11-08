@@ -1,7 +1,7 @@
 //React core
 import React from "react";
-import image from './assets/images/package2.jpg';
-import './css/App.css';
+import image from './assets/images/package-3.png';
+import "./css/App.css";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Link } from "react-router-dom";
 
