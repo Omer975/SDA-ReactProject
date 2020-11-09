@@ -12,7 +12,7 @@ export default function Card(props) {
             { props.filteredInfo.map(post => {
             return(
                 <div key={ post.id} className="post">
-                    <Link to="/cardinfo"><h4>id:{ post.id }</h4></Link>
+                    <h4>id:<Link to="/cardinfo">{ post.id }</Link></h4>
                     <p>Status:{ post.status }</p>
                     <p>ETA:{ post.eta }</p>
                 </div>
