@@ -1,5 +1,6 @@
 //React core
-import React from "react";
+// import React from "react";
+import React, {Component} from "react";
 import image from './assets/images/package-3.png';
 import "./css/App.css";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -16,6 +17,7 @@ import CardInfo from "./components/CardInfo";
 // import information from "./information.json";
 
 export default function App() {
+
   return(
     <div>
       <img src={image} alt="post-img" />
@@ -30,8 +32,10 @@ export default function App() {
 
           <Switch>
             {/*  <Route path="/" component={App} /> */}
-            <Route path="/home" component={HomePage} />
+            <Route path="/home" component={HomePage}  />
             <Route path="/cardinfo" component={CardInfo} />
+            {/* <Route path="/Card/:id"
+                   render={() => <CardInfo items={items} />} /> */}
           </Switch>
 
         </div>
