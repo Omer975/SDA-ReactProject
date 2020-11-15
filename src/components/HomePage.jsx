@@ -12,8 +12,6 @@ import SearchBox from "../components/SearchBox";
 //import others
 import CardInfo from "./CardInfo";
 
-
-
 class HomePage extends Component {
 
   constructor(props){
