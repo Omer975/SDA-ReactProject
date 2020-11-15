@@ -7,14 +7,12 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Link } from "react-router-dom";
 
 //Components
-// import Card from "./components/Card";
-// import SearchBox from "./components/SearchBox";
-// import CardInfo from "./components/CardInfo";
+
 import HomePage from "./components/HomePage";
 import CardInfo from "./components/CardInfo";
 
 //import others
-// import information from "./information.json";
+
 
 export default function App() {
 
@@ -34,8 +32,10 @@ export default function App() {
             {/*  <Route path="/" component={App} /> */}
             <Route path="/home" component={HomePage}  />
             <Route path="/cardinfo" component={CardInfo} />
-            {/* <Route path="/Card/:id"
-                   render={() => <CardInfo items={items} />} /> */}
+            
+
+            {/* <Route path="/Card/:id" component={CardInfo}
+                          render={({ match }) => <CardInfo match={ match } data={list} />} /> */}
           </Switch>
 
         </div>
