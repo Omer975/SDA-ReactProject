@@ -1,21 +1,17 @@
 //React core
 import React, {Component, setState} from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
-//import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
 //Components
 import Card from "../components/Card";
 import SearchBox from "../components/SearchBox";
-// import CardInfo from "../components/CardInfo";
+
 
 //import others
-import information from "../information.json";
-// import { Router } from "react-router-dom";
 import CardInfo from "./CardInfo";
-// import App from "../App";
+
 
 
 class HomePage extends Component {
@@ -35,17 +31,13 @@ class HomePage extends Component {
         .then(json => {
                 this.setState({
                     isLoaded: true,
-                    items: json,
-                                             
+                    items: json,                                
                 })
             });
-          
-        }
+        const list = this.state.items;    
+    }
   
-  // list() {
-  //   const list = this.state.items;
-  //   return list;
-  // }
+  //this.state.items
   
   handleInput = (e) => {
     // console.log(e.target.value);
@@ -67,6 +59,9 @@ class HomePage extends Component {
         <h3>Search package by id or by status</h3>
         <SearchBox handleInput={this.handleInput}/>
         <Card filteredInfo={filteredInfo}  />
+        
+        {/* <Route path="/Card/:id"
+              render={({ match }) => <CardInfo match={ match} data={list} />} /> */}
         {/* <Router>
           <Switch>
             

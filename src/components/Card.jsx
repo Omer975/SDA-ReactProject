@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import CardInfo from "../components/CardInfo";
 
 //import others
-// import information from "../information.json";
+
 
 export default function Card(props) {
     
@@ -16,7 +16,7 @@ export default function Card(props) {
             { props.filteredInfo.map(post => {
             return(
                 <div key={ post.id} className="post">
-                    <h4> id:<Link to={`/Card/${post.id}`} onClick="">{ post.id }</Link></h4>
+                    <h4> id:<Link to={`/Card/${post.id}`}>{ post.id }</Link></h4>
                     <p>Status:{ post.status }</p>
                     <p>ETA:{ post.eta }</p>
                     {/* <Router>
