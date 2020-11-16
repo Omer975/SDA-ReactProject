@@ -13,7 +13,7 @@ import SearchBox from "../components/SearchBox";
 import CardInfo from "./CardInfo";
 
 class HomePage extends Component {
-
+  
   constructor(props){
     super(props);
     this.state = {
@@ -29,23 +29,25 @@ class HomePage extends Component {
         .then(json => {
                 this.setState({
                     isLoaded: true,
-                    items: json,                                
+                    items: json,
+                                                
                 })
             });
-        const list = this.state.items;    
     }
   
-  //this.state.items
+  
   
   handleInput = (e) => {
-    // console.log(e.target.value);
+    
     this.setState({searchTerm: e.target.value})
   }
   render() {
     let filteredInfo = this.state.items.filter( (info) => {
-      return info.id.includes(this.state.searchTerm) | info.status.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+      return info.id.includes(this.state.searchTerm) | 
+             info.status.toLowerCase().includes(this.state.searchTerm.toLowerCase())
 
     })
+    
   return (
       <div className="App">
         <div className="button-2">
